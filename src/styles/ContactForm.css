@@ -1,0 +1,79 @@
+/* Full-page background */
+.contf-container{
+    width: 70%;
+    border: 5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: fadeIn 1s ease-in-out; */
+}
+
+/* Form container */
+.log-d2 {
+    background: white;
+    /* padding: 144px; Increased padding */
+    border-radius: 30px; /* Larger border radius */
+    box-shadow: 0px 24px 60px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    max-width: 70%;
+}
+
+/* Form title */
+.log-l1 {
+    font-size: 20px; /* Larger title font */
+    font-weight: bold;
+    color: #141313;
+    margin-bottom: 5px; /* Increased gap */
+    /* display: block; */
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+/* Input fields */
+.log-i1, .log-i2, .log-i3 {
+    width: 100%;
+    padding: 8px; /* Increased padding */
+    /* margin: 48px 0; Increased margin for gap */
+    border: 1px solid #ccc;
+    border-radius: 15px; /* Larger border radius */
+    font-size: 18px; /* Larger font size */
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.log-i1:focus, .log-i2:focus, .log-i3:focus {
+    border-color: #1D2671;
+    box-shadow: 0px 0px 30px rgba(29, 38, 113, 0.6);
+}
+
+/* Submit Button */
+.log-btn {
+    width: 100%;
+    /* padding: 58px; Larger button */
+    /* margin-top: 90px; Increased gap */
+    border-radius: 20px;
+
+    font-size: 20px; /* Larger button text */
+    cursor: pointer;
+    background-color: #1D2671;
+    color: white;
+    transition: 0.4s ease-in-out;
+    letter-spacing: 2px;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.log-btn:hover {
+    background-color: #142185;
+    transform: scale(1.15);
+}
+
+/* Labels for input fields */
+.log-l2, .log-l3, .log-l4 {
+    display: block;
+    text-align: left;
+    margin-top: 10px; /*Increased gap */
+    font-size: 20px; 
+    font-weight: bold;
+    color: #444;
+    text-transform: capitalize;
+}
