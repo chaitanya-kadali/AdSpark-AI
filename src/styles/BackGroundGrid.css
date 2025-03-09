@@ -1,0 +1,24 @@
+.background-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* z-index: -1; Behind content */
+  }
+  
+  .grid-line {
+    position: absolute;
+    background-color: rgba(69, 52, 226, 0.852); /* Grid line color */
+    opacity: 0.3;
+  }
+  
+  .vertical {
+    width: 1px;
+    height: 100%;
+  }
+  
+  .horizontal {
+    height: 1px;
+    width: 100%;
+  }
+  

@@ -12,7 +12,7 @@ return(
     <>
  <div className="background-container">
       
-      <BackgroundGrid />
+ <BackgroundGrid />
 
       {/* Content */}
       <div className="content">
@@ -20,7 +20,6 @@ return(
         <p>Build Ready-To-Launch 'Full-Stack' Funnels Solo 🚀</p>
 
         <VideoManager />
-        <h1> contact us </h1>
         <ContactForm/>
       </div>
 

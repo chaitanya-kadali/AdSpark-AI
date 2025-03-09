@@ -1,41 +1,53 @@
 import React, { useState, useEffect } from "react";
-import '../styles/Home.css';
+import "../styles/BackgroundGrid.css"
 
 const BackgroundGrid = () => {
-  const [gridCount, setGridCount] = useState(0);
+  const [numVerticalLines, setNumVerticalLines] = useState(0);
+  const [numHorizontalLines, setNumHorizontalLines] = useState(0);
+  const [gridHeight, setGridHeight] = useState("100vh");
 
-  // Function to calculate grid count based on screen size
-  const calculateGridCount = () => {
-    const boxSize = 30; // Adjust this value for grid density
-    const cols = Math.floor(window.innerWidth / boxSize);
-    const rows = Math.floor(window.innerHeight / boxSize);
-    setGridCount(cols * rows);
+  const updateGrid = () => {
+    const boxSize = 30; // Adjust grid density
+    const contentHeight = Math.max(document.body.scrollHeight, window.innerHeight); // Get full content height
+    const numVertical = Math.floor(window.innerWidth / boxSize);
+    const numHorizontal = Math.floor(contentHeight / boxSize);
+
+    setNumVerticalLines(numVertical);
+    setNumHorizontalLines(numHorizontal);
+    setGridHeight(`${contentHeight}px`);
   };
 
   useEffect(() => {
-    calculateGridCount(); // Initial calculation
+    updateGrid(); // Initial setup
+    window.addEventListener("resize", updateGrid);
+    window.addEventListener("scroll", updateGrid);
 
-    window.addEventListener("resize", calculateGridCount);
-    return () => window.removeEventListener("resize", calculateGridCount);
+    return () => {
+      window.removeEventListener("resize", updateGrid);
+      window.removeEventListener("scroll", updateGrid);
+    };
   }, []);
 
   return (
+    <div className="background-grid" style={{ height: gridHeight }}>
+      {/* Vertical Lines */}
+      {Array.from({ length: numVerticalLines }).map((_, index) => (
+        <div
+          key={`v-${index}`}
+          className="grid-line vertical"
+          style={{ left: `${index * 30}px` }} // Spacing between vertical lines
+        />
+      ))}
 
-      <div
-        className="background-grid"
-        style={{
-          display: "grid",
-          gridTemplateColumns: `repeat(auto-fill, minmax(30px, 1fr))`,
-          gridTemplateRows: `repeat(auto-fill, minmax(30px, 1fr))`,
-          width: "100vw",
-          height: "100vh",
-        }}
-      >
-        {Array.from({ length: gridCount }).map((_, index) => (
-          <div key={index} className="grid-box" />
-        ))}
-      </div>
-    
+      {/* Horizontal Lines */}
+      {Array.from({ length: numHorizontalLines }).map((_, index) => (
+        <div
+          key={`h-${index}`}
+          className="grid-line horizontal"
+          style={{ top: `${index * 30}px` }} // Spacing between horizontal lines
+        />
+      ))}
+    </div>
   );
 };
 

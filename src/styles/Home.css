@@ -1,49 +1,36 @@
-  .background-container {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background:#000000;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: scroll;
-  }
-  
-  .background-grid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    grid-template-rows: repeat(auto-fill, 50px);
-    opacity: 0.3;
-  }
-  
-  .grid-box {
-    width: 100%;
-    height: 100%;
-    border: 0.5px solid rgba(69, 52, 226, 0.852);    /* grid line */
-    background-color: transparent;
-  }
-  
-  .content {
-    z-index: 1;
-    text-align: center;
-    color: #ffffff;
+.background-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000000; /* Ensure full black background */  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent extra white space */
+}
 
-  }
-  
-  .content h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-  }
-  
-  .content p {
-    font-size: 1.2rem;
-    color: #ab64ed;
-  }
+.content {
+  position: relative; /* Ensures content is on top */
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #ab64ed;
+}
+
+/* Prevent unwanted white space */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: #000000; /* Fixes white area */
+  overflow-x: hidden;
+}
