@@ -8,7 +8,7 @@
   
   .grid-line {
     position: absolute;
-    background-color: rgba(69, 52, 226, 0.852); /* Grid line color */
+    background-color: rgba(69, 52, 226, 0.959); /* Grid line color */
     opacity: 0.3;
   }
   

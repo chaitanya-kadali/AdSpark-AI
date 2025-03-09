@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../styles/ContactForm.css'
 
 const ContactForm = () => {
-  const scriptURL = "YOUR SCRIPT URL"; 
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyB3cUhUPh9Dp4kvOsRzfGXfgITyT0wi-1GOYPMmFsA1PLiiONGniyFXQ5bVXE74clUTg/exec"; 
 
   /* Steps to Create the Google Apps Script Web App URL
 
@@ -69,7 +69,11 @@ const ContactForm = () => {
       10. Click Deploy and authorize if prompted.
 
       11. Copy the generated URL and replace `scriptURL` in your React code.
-*/
+      
+      note :- this is gonna be effected in the sheet as name       form.append("your-number", formData.number);
+
+
+      */
   // State for form fields
   const [formData, setFormData] = useState({
     name: "",
@@ -117,46 +121,39 @@ const ContactForm = () => {
   return (
     <div className="contf-container">
       
-     
-          <div className='log-d2'>
+        <div className='form-body'>
               
             <form id='log-form' onSubmit={handleSubmit} name="contact-form">
 
-                <label className="log-l1">This is Login Page</label>
+                <label className="log-l1">Submit Your Feedback</label>
 
-              <label className="log-l2">Enter the Email ID:</label>
+              <label className="log-labl">Enter the Email ID:</label>
 
-                <input className="log-i1"  type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required /><br />
+                <input className="log-inp"  type="email"
+                name="email" placeholder="Email"value={formData.email}
+                onChange={handleChange} required /><br />
 
-                <label className="log-l3">Enter the Name:</label>
+                <label className="log-labl">Enter the Name:</label>
 
-                <input type="text" className="log-i2" 
-                name="name" placeholder="Name"
+                <input type="text" className="log-inp" 
+                name="name" placeholder="Name"  
                 value={formData.name} onChange={handleChange}
                 required/><br />
 
-                <label className="log-l4">Enter the Product Name:</label>
+                <label className="log-labl">Enter the Product Name:</label>
 
-                <input type="text" name="number"
-                placeholder="Number" value={formData.number}
-                onChange={handleChange} required className="log-i3" /><br />
+                <input type="text" name="number" placeholder="Number" value={formData.number}
+                onChange={handleChange} required className="log-inp" /><br />
 
-                <textarea
-                        name="message" rows="7" placeholder="Your Message"
-                        value={formData.message} onChange={handleChange}
+                <textarea className="log-inp" name="message" rows="7" placeholder="Your Message"
+                      value={formData.message} onChange={handleChange}
                     required ></textarea>
                 
                     <button className="log-btn" type="submit" id="submit" disabled={isSubmitting}>
                       {isSubmitting ? "Submitting..." : "Submit"}
                     </button>
-            
             </form>
-          </div>
+        </div>
 
     </div>
   );

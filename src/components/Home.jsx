@@ -20,6 +20,7 @@ return(
         <p>Build Ready-To-Launch 'Full-Stack' Funnels Solo 🚀</p>
 
         <VideoManager />
+        <h1>Contact us </h1>
         <ContactForm/>
       </div>
 

@@ -9,8 +9,8 @@ const BackgroundGrid = () => {
   const updateGrid = () => {
     const boxSize = 30; // Adjust grid density
     const contentHeight = Math.max(document.body.scrollHeight, window.innerHeight); // Get full content height
-    const numVertical = Math.floor(window.innerWidth / boxSize);
-    const numHorizontal = Math.floor(contentHeight / boxSize);
+    const numVertical = Math.floor(window.innerWidth / boxSize) +1;
+    const numHorizontal = Math.floor(contentHeight / boxSize)+1;
 
     setNumVerticalLines(numVertical);
     setNumHorizontalLines(numHorizontal);

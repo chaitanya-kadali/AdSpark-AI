@@ -9,12 +9,13 @@
 }
 
 /* Form container */
-.log-d2 {
+.form-body {
     background: #111; /* Darker theme */
     padding: 40px; /* More balanced spacing */
     border-radius: 20px; 
     box-shadow: 0px 12px 30px rgba(255, 255, 255, 0.2);
     text-align: center;
+    width: 80%;
     max-width: 500px; /* Prevent excessive width */
 }
 
@@ -28,7 +29,7 @@
 }
 
 /* Input fields */
-.log-i1, .log-i2, .log-i3 {
+.log-inp{
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -67,7 +68,7 @@
 }
 
 /* Labels */
-.log-l2, .log-l3, .log-l4 {
+.log-labl {
     display: block;
     text-align: left;
     margin-top: 10px;
