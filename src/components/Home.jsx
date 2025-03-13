@@ -3,6 +3,7 @@ import '../styles/Home.css';
 import VideoManager from './video/VideoManager';
 import BackgroundGrid from './BackGround';
 import ContactForm from './ContactForm';
+import BodyComp from './BodyComp';
 function Home()
 { 
     
@@ -16,12 +17,16 @@ return(
 
       {/* Content */}
       <div className="content">
-        <h1>Ganesh Company</h1>
-        <p>Build Ready-To-Launch 'Full-Stack' Funnels Solo 🚀</p>
-
-        <VideoManager />
-        <h1>Contact us </h1>
-        <ContactForm/>
+        <div>
+            <h1>AdSpark AI Agency</h1>
+            <p>🚀 Step Into the Future with AdSpark AI—Your Brand, Reimagined with AI Mini Videos</p>
+        </div>
+         <div> <BodyComp/> </div>
+              <VideoManager />
+        <div> 
+              <h1>Contact us </h1>
+              <ContactForm/>
+        </div>
       </div>
 
     </div>

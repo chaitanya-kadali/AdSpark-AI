@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../styles/ContactForm.css'
 
 const ContactForm = () => {
-  const scriptURL = process.env.SpreadSheet_URL; 
+  const scriptURL = import.meta.env.SpreadSheet_URL; 
 
   /* Steps to Create the Google Apps Script Web App URL
 
