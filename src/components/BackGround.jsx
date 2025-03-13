@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/BackgroundGrid.css"
+import '../styles/BackgroundGrid.css';
 
 const BackgroundGrid = () => {
   const [numVerticalLines, setNumVerticalLines] = useState(0);
