@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../styles/ContactForm.css'
 
 const ContactForm = () => {
-  const scriptURL = "https://script.google.com/macros/s/AKfycbyB3cUhUPh9Dp4kvOsRzfGXfgITyT0wi-1GOYPMmFsA1PLiiONGniyFXQ5bVXE74clUTg/exec"; 
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxvTfViKLyRQRcJoh3sdvJB9srk_rGImsDomUo1wJe1MVbQsqVbcvXv08mDVKX1mcFexw/exec"; 
 
   /* Steps to Create the Google Apps Script Web App URL
 
@@ -67,8 +67,10 @@ const ContactForm = () => {
       9. Under "Who has access", select "Anyone".
 
       10. Click Deploy and authorize if prompted.
+      
+      11. click `RUN` at the spreadsheet extensions manager once **********************************************
 
-      11. Copy the generated URL and replace `scriptURL` in your React code.
+      12. Copy the generated URL and replace `scriptURL` in your React code.
       
       note :- this is gonna be effected in the sheet as name       form.append("your-number", formData.number);
 
@@ -140,7 +142,7 @@ const ContactForm = () => {
                 value={formData.name} onChange={handleChange}
                 required/><br />
 
-                <label className="log-labl">Enter the Product Name:</label>
+                <label className="log-labl">Enter the Phone number:</label>
 
                 <input type="text" name="number" placeholder="Number" value={formData.number}
                 onChange={handleChange} required className="log-inp" /><br />
