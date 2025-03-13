@@ -33,7 +33,7 @@ const styles = {
 
 const MagicIntro = () => (
   <motion.div style={styles.container} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-    <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }}>
+    <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }} className=''>
       ✨ Experience the Magic in Motion ✨
     </motion.h1>
     <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}>

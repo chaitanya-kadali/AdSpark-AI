@@ -1,4 +1,11 @@
 /* font family GLOBAL Declarations */
+
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 @font-face {
     font-family: 'Poppins-Bold';
     src: url('../fonts/Poppins-Bold.ttf') format('truetype');
@@ -31,7 +38,4 @@
     src: url('../fonts/SourceSansPro-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-  }
-*{
- font-family: 'SourceSansPro';
   }

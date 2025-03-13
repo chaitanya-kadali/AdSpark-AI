@@ -4,6 +4,9 @@ import VideoManager from './video/VideoManager';
 import BackgroundGrid from './BackGround';
 import ContactForm from './ContactForm';
 import BodyComp from './BodyComp';
+import HeadingLogo from './HeadingLogo';
+import Typography from './Typography';
+
 function Home()
 { 
     
@@ -18,8 +21,9 @@ return(
       {/* Content */}
       <div className="content">
         <div>
-            <h1>AdSpark AI Agency</h1>
-            <p>🚀 Step Into the Future with AdSpark AI—Your Brand, Reimagined with AI Mini Videos</p>
+            <HeadingLogo/>
+            <Typography />
+            
         </div>
          <div> <BodyComp/> </div>
               <VideoManager />
