@@ -1,6 +1,6 @@
 /* Full-page form container */
 .contf-container {
-    width: 80%;
+    width: 99%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +15,9 @@
     border-radius: 20px; 
     box-shadow: 0px 12px 30px rgba(255, 255, 255, 0.2);
     text-align: center;
-    width: 80%;
-    max-width: 500px; /* Prevent excessive width */
+    width: 95%;
+    max-width: 720px; 
+    /* Prevent excessive width */
 }
 
 /* Form title */

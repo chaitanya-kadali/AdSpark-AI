@@ -16,7 +16,7 @@ const styles = {
   },
   text: {
     fontSize: '1.2rem',
-    maxWidth: '600px',
+    maxWidth: '70%',
     marginBottom: '20px',
   },
   button: {
@@ -33,11 +33,18 @@ const styles = {
 
 const MagicIntro = () => (
   <motion.div style={styles.container} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-    <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }} className=''>
+    <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }} className="text-violet-300" >
       ✨ Experience the Magic in Motion ✨
     </motion.h1>
-    <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}>
-      Why tell your brand’s story when you can <strong>show it?</strong> At <strong>AdSpark AI</strong>, we transform ordinary moments into extraordinary experiences with AI-generated mini videos—tailored perfectly for your industry.
+    <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}  className="text-white">
+        
+      <p className="text-white !text-white">
+      Why tell your brand’s story when you can &nbsp; <span className="font-bold">show it? </span> At &nbsp;
+      <span className="italic">AdSpark AI </span>
+      we transform ordinary moments into <span className="underline">extraordinary experiences</span> with AI-generated
+      <span className="italic font-semibold"> mini videos—tailored perfectly </span> for your industry.
+      
+    </p>
     </motion.p>
   </motion.div>
 );
@@ -78,9 +85,7 @@ const CallToAction = () => (
     <motion.p style={styles.text}>
       Don't let your brand fade into the background—make it <strong>unforgettable</strong>.
     </motion.p>
-    <motion.button style={styles.button} whileHover={{ scale: 1.1 }}>
-      🚀 Book a Call with Our Team Today
-    </motion.button>
+    
   </motion.div>
 );
 

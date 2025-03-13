@@ -27,8 +27,8 @@ return(
         </div>
          <div> <BodyComp/> </div>
               <VideoManager />
-        <div> 
-              <h1>Contact us </h1>
+        <div style={{width:"100%",paddingLeft:'2%'}}> 
+              <h1 className="text-white" style={{fontSize:"2.4rem",padding:"20px"}}>🚀 Book a Call with Our Team Today </h1>
               <ContactForm/>
         </div>
       </div>

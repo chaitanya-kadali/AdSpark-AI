@@ -9,6 +9,7 @@ const Typography = () => {
      
       <span 
     style={{
+        fontWeight:'bold',
       background: "linear-gradient(90deg, white, #a78bfa, #ec4899, #f59e0b, white)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
@@ -34,12 +35,7 @@ const Typography = () => {
       </div>
     
     {/* Descriptive text */}
-    <p className="text-xl text-white">
-      Get started with this <span className="font-bold">beginner-friendly, </span>
-      <span className="italic">over-the-shoulder </span>
-      training that gets you from <span className="underline">zero</span> to your first full-stack 
-      customer getting funnel in <span className="italic font-semibold">hours instead of days—even if you've never built one before.</span>
-    </p>
+    
   </div>
   );
 };
