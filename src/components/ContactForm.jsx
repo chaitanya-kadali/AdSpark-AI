@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RadioInput from "./RadioInput";
-import '../styles/ContactForm.css'
+import '../styles/ContactForm.css';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const scriptURL = "https://script.google.com/macros/s/AKfycbzk7ugk0VKBuGIPgKFmjeuZuGXnK0Y-ia7b0QOz2YRzmhKUm7VBytpllW5_Ai8XWU0/exec"; 
@@ -23,7 +24,19 @@ const ContactForm = () => {
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
+  const sendEmail = async() =>{
+                        //ServiceID -      templateID -        #form      -publickey
+    emailjs.send('service_5y7fh3j', 'template_781ltup', formData , 'QuWQRzl3zKUtd6h8E')
+    .then(() =>{
+        console.log('Mesg Sent successfully ✔✔',formData);
+    }, () =>{
+        //Show error message
+         console.log('Mesg not sent (service error) ❌');
+    })
+}
+
+
+const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -33,6 +46,7 @@ const ContactForm = () => {
       form.append("Contact-Number", String(formData.number));
       form.append("Business-Name", formData.business_name);
       form.append("invest", radio);
+      await sendEmail();
 
       const response = await fetch(scriptURL, { method: "POST", body: form });
 
