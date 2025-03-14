@@ -11,8 +11,8 @@ const RadioInput = (props) => {
     <div style={{alignContent:"left"}}>
     <div className="max-w-md mx-auto p-6 bg-gray rounded-lg ">
           <label className="block text-lg font-medium text-white-700 mb-4">
-            <span className="font-bold">Are you ready to invest ₹5000 in AI-powered videos?</span>
-            <span className="text-blue-500 ml-1">*</span>
+            {/* <span className="font-bold"></span>
+             */}
           </label>
           
           <div className="mt-3 space-y-3">

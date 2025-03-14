@@ -15,12 +15,12 @@ const styles = {
     maxWidth: '600px', // Keep it compact
   },
   heading: {
-    fontSize: '2.2rem', // Smaller heading for better balance
+    fontSize: '1.4rem', // Smaller heading for better balance
     fontWeight: 'bold',
     marginBottom: '15px',
   },
   text: {
-    fontSize: '1rem',
+    fontSize: '0.9rem',
     maxWidth: '90%',
     marginBottom: '10px',
     lineHeight: '1.4', // Better text spacing
@@ -76,11 +76,13 @@ const styles = {
 
 const IndustryShowcase = ({ title, description, video_id }) => (
   <div style={styles.container}>
+
     <h2 style={styles.heading}>{title}</h2>
     <p style={styles.text}>{description}</p>
     <div style={{height:"85vh"}}> 
       <WistiaVideo mediaId={video_id} />
       </div>
+  
   </div>
 );
 

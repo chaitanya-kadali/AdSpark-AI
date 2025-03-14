@@ -16,12 +16,12 @@ const styles = {
     maxWidth: '700px', // Keep it compact
   },
   heading: {
-    fontSize: '2.2rem', // Smaller heading for better balance
+    fontSize: '1.2rem', // Smaller heading for better balance
     fontWeight: 'bold',
     marginBottom: '15px',
   },
   text: {
-    fontSize: '1rem',
+    fontSize: '0.8rem',
     maxWidth: '90%',
     marginBottom: '10px',
     lineHeight: '1.4', // Better text spacing
@@ -43,7 +43,7 @@ const MagicIntro = () => (
     
     <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}  className="text-white">
         
-      <p className="text-white !text-white">
+      
       <span className="text-red-500 mr-3">🔥</span>
       <span className="italic">  Get Ready-To-Launch  <span className="ml-1"></span></span>
       <span className="font-bold">AI-Powered  <span className="ml-1"></span> </span> 
@@ -52,7 +52,7 @@ const MagicIntro = () => (
       <span className="italic font-semibold"> 
       for Your Brand </span>
       
-    </p>
+
     </motion.p>
 
     <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }} className="text-white bold" >
@@ -61,7 +61,7 @@ const MagicIntro = () => (
 
     <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}  className="text-white">
         
-      <p className="text-white !text-white">
+    
         <span >  We craft 
         <span className="ml-1"></span>
         <span className="font-bold">high-impact videos 
@@ -71,7 +71,7 @@ const MagicIntro = () => (
       <span className="italic font-semibold">  Check out some of our recent projects: 
       </span>
       
-    </p>
+    
     </motion.p>
 
   </motion.div>

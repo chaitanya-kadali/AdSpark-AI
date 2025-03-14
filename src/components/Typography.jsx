@@ -4,28 +4,22 @@ const Typography = () => {
   return (
     <div className="max-w-4xl mx-auto text-center">
     {/* Main headline with gradient */}
-    <h1 className="text-6xl font-bold leading-tight">
-    <span className="text-red-500 mr-3">🚀</span>
+    <h1 className="font-bold leading-tight" style={{ fontSize: "1.5rem" }}>
+      <span className="text-red-500 mr-3">🚀</span>
       <span 
-    style={{
-        fontWeight:'bold',
-      background: "linear-gradient(90deg, white, #a78bfa, #ec4899, #f59e0b)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
-      display: "inline-block",
-      textShadow: "0px 0px 10px rgba(255,255,255,0)" // White glow to remove black edges
-    }}
-  >
- AI-Powered Mini Videos
-  </span>
-  <span className="text-white">  for <br></br>Your Brand </span>
-      
-       </h1>
-    
-    {/* Subheading with rocket icon */}
-   
-    {/* Descriptive text */}
+        style={{
+          fontWeight:'bold',
+          background: "linear-gradient(90deg, white, #ec4899, #f59e0b)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          display: "inline-block",
+          textShadow: "0px 0px 10px rgba(255,255,255,0)" // White glow to remove black edges
+        }}
+      >
+        AI-Powered Mini Videos
+      </span>
+    </h1>
   </div>
   );
 };

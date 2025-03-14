@@ -80,6 +80,9 @@ const ContactForm = () => {
                 <input className="log-inp"  type="text"
                 name="email" placeholder="Email"value={formData.email}
                 onChange={handleChange} required /><br />
+                
+              <label className="log-labl"> Are you ready to invest ₹5000 in AI-powered videos?
+                 <span className="text-blue-500 ml-1">*</span> </label> 
 
                 <RadioInput />
                 
