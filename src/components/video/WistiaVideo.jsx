@@ -35,7 +35,7 @@ const WistiaVideo = ({ mediaId }) => {
        {/* // background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${mediaId}/swatch');  */}
 
       </style>
-      <wistia-player media-id={mediaId} aspect="1.7777777777777777"></wistia-player>
+      <wistia-player media-id={mediaId} aspect="0.5625"></wistia-player>
     </div>
   );
 };
