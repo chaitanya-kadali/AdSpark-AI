@@ -22,14 +22,15 @@ const WistiaVideo = ({ mediaId }) => {
 
   return (
     
-    <div style={{ width: "80%", maxWidth: "400px", flex: "1", margin: "5px" }}>
+    <div style={{ height:"90%", maxWidth: "400px", flex: "1",margin:"10%"}}>
       {/* Wistia Player Component */}
       <style>
         {`
-          wistia-player[media-id='${mediaId}']:not(:defined) { 
-            filter: blur(5px); 
-            padding-top: 56.25%; 
-           
+       wistia-player[media-id='${mediaId}']:not(:defined)
+        { 
+       background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/8g09s4cnzd/swatch');
+          display: block; filter: blur(5px); padding-top:177.78%; 
+          
           }
         `}
        {/* // background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${mediaId}/swatch');  */}
@@ -37,9 +38,27 @@ const WistiaVideo = ({ mediaId }) => {
       </style>
       <wistia-player options={{
         fitStrategy: 'contain', // Ensures the video fits within the defined dimensions
-      }} media-id={mediaId} aspect="0.5629"></wistia-player>
+      }} media-id={mediaId} aspect="0.5625"></wistia-player>
     </div>
   );
 };
 
 export default WistiaVideo;
+
+
+/* 
+
+<script src="https://fast.wistia.com/embed/8g09s4cnzd.js" async
+ type="module"></script>
+ <style>
+ 
+ wistia-player[media-id='8g09s4cnzd']:not(:defined)
+  { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/8g09s4cnzd/swatch');
+    display: block; filter: blur(5px); padding-top:177.78%; }
+    
+    
+    
+    </style> <wistia-player media-id="8g09s4cnzd" 
+    aspect="0.5625"></wistia-player>
+
+*/

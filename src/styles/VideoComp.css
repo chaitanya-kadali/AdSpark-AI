@@ -1,21 +1,34 @@
-  .video-cont {
-    width: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Optional: to add space between child elements */
-  }
-
-  .video-child {
-    flex: 1; /* Adjust based on your needs */
-    margin: 5px; /* Optional: to add some space around each child */
-  }
-  .total-vid-cont{
-  max-width: 800px;
-  width: 80%;
+.video-cont {
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
-  flex-direction: column;  /* Stacks child divs vertically */
-  align-items: center;
-  /* border: 5px solid red; */
+  flex-direction: row;
+  justify-content: space-between; /* Optional: to add space between child elements */
+}
+
+.video-child {
+  flex: 1; /* Adjust based on your needs */
+  margin: 5px; /* Optional: to add some space around each child */
+}
+.total-vid-cont{
+max-width: 800px;
+width: 80%;
+display: flex;
+justify-content: center;
+flex-direction: column;  /* Stacks child divs vertically */
+align-items: center;
+/* border: 5px solid red; */
+}
+.video-Wrapper{
+  width: 90%;
+  display:flex;
+  justify-content:center;
+  /* border:4px solid white; */
+}
+@media (max-width: 600px){
+  .video-Wrapper{
+    /* border:10px solid pink; */
+    width:90%;
+    /* height:50%; */
   }
+}

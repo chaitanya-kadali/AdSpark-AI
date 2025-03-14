@@ -5,74 +5,81 @@ import '../../styles/VideoComp.css';
 
 // Common Styles
 const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    padding: '10px',
-    width: '100%',
-    maxWidth: '600px', // Keep it compact
-  },
-  heading: {
-    fontSize: '1.4rem', // Smaller heading for better balance
-    fontWeight: 'bold',
-    marginBottom: '15px',
-  },
-  text: {
-    fontSize: '0.9rem',
-    maxWidth: '90%',
-    marginBottom: '10px',
-    lineHeight: '1.4', // Better text spacing
-  },
-  button: {
-    padding: '10px 20px',
-    fontSize: '1rem',
-    fontWeight: 'bold',
-    backgroundColor: '#ff6600',
-    color: 'white',
-    border: 'none',
-    cursor: 'pointer',
-    borderRadius: '5px',
-  },
-  navigationContainer: {
-    position: 'relative',
-    width: '100%',
-    maxWidth: '800px',
-    margin: '0 auto',
-//     height:'80vh'
-  },
-  arrow: {
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    width: '40px',
-    height: '40px',
-    backgroundColor: 'rgba(255, 255, 255, 0.7)',
-    borderRadius: '50%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    cursor: 'pointer',
-    zIndex: 10,
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
-  },
-  leftArrow: {
-    left: '10px',
-  },
-  rightArrow: {
-    right: '10px',
-  },
-  carouselContainer: {
-    overflow: 'hidden',
-    width: '100%',
-  },
-  videoWrapper: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-  }
-};
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      textAlign: 'center',
+      padding: '10px',
+      width: '100%',
+      maxWidth: '600px', // Keep it compact
+    },
+    heading: {
+      fontSize: '1.4rem', // Smaller heading for better balance
+      fontWeight: 'bold',
+      marginBottom: '15px',
+    },
+    text: {
+      fontSize: '0.9rem',
+      maxWidth: '90%',
+      marginBottom: '10px',
+      lineHeight: '1.4', // Better text spacing
+    },
+    button: {
+      padding: '10px 20px',
+      fontSize: '1rem',
+      fontWeight: 'bold',
+      backgroundColor: '#ff6600',
+      color: 'white',
+      border: 'none',
+      cursor: 'pointer',
+      borderRadius: '5px',
+    },
+    navigationContainer: {
+      position: 'relative',
+      width: '100%',
+      maxWidth: '800px',
+      height:'20%',
+      // margin: '0 auto',
+      border:'5px solid white',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom:"-25%"
+    },
+    arrow: {
+      position: 'absolute',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      width: '40px',
+      height: '40px',
+      backgroundColor: 'rgba(255, 255, 255, 0.7)',
+      borderRadius: '50%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      cursor: 'pointer',
+      zIndex: 10,
+      boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
+    },
+    leftArrow: {
+      left: '10px',
+    },
+    rightArrow: {
+      right: '10px',
+    },
+    carouselContainer: {
+      overflow: 'hidden',
+      width: '100%',
+    },
+    // videoWrapper: {
+    //   width: '100%',
+    //   display: 'flex',
+    //   justifyContent: 'center',
+    //   border:'4px solid white'
+// }
+
+  };
 
 const IndustryShowcase = ({ title, description, video_id }) => (
   <div style={styles.container}>
