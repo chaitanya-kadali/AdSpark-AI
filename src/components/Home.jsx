@@ -24,8 +24,7 @@ return(
             <Typography />
             <BodyComp/>
 
-        <div style={{width:"100%",paddingLeft:'2%'}}> 
-              <h1 className="text-white" style={{fontSize:"2.4rem",padding:"20px"}}>🚀 Book a Call with Our Team Today </h1>
+        <div style={{width:"100%",paddingLeft:'2%'}}>
               <ContactForm/>
         </div>
       </div>

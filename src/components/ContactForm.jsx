@@ -59,7 +59,7 @@ const ContactForm = () => {
               
             <form id='log-form' onSubmit={handleSubmit} name="contact-form">
 
-                <label className="log-l1">Submit Your Feedback</label>
+                <label className="log-l1">Fill in the details below and let’s get started:</label>
 
              
 

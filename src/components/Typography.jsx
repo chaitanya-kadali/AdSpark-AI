@@ -9,12 +9,12 @@ const Typography = () => {
       <span 
     style={{
         fontWeight:'bold',
-      background: "linear-gradient(90deg, white, #a78bfa, #ec4899, #f59e0b, white)",
+      background: "linear-gradient(90deg, white, #a78bfa, #ec4899, #f59e0b)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       backgroundClip: "text",
       display: "inline-block",
-      textShadow: "0px 0px 10px rgba(255,255,255,0.3)" // White glow to remove black edges
+      textShadow: "0px 0px 10px rgba(255,255,255,0)" // White glow to remove black edges
     }}
   >
  AI-Powered Mini Videos

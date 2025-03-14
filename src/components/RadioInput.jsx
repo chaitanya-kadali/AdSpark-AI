@@ -8,10 +8,9 @@ const RadioInput = (props) => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg shadow-blue-200/50">
-      <form className="space-y-6">
-        <div>
-          <label className="block text-lg font-medium text-gray-700 mb-4">
+    <div style={{alignContent:"left"}}>
+    <div className="max-w-md mx-auto p-6 bg-gray rounded-lg ">
+          <label className="block text-lg font-medium text-white-700 mb-4">
             <span className="font-bold">Are you ready to invest ₹5000 in AI-powered videos?</span>
             <span className="text-blue-500 ml-1">*</span>
           </label>
@@ -22,12 +21,12 @@ const RadioInput = (props) => {
                 id="yes-option"
                 name="investment-response"
                 type="radio"
-                className="h-5 w-5 text-blue-600 border-gray-300 focus:ring-blue-500"
+                className="h-5 w-5 text-blue-600 border-white-300 focus:ring-blue-500"
                 value="yes"
                 checked={response === 'yes'}
                 onChange={() => handleChange('yes')}
               />
-              <label htmlFor="yes-option" className="ml-3 block text-gray-700">
+              <label htmlFor="yes-option" className="ml-3 block text-white-700">
                 Yes
               </label>
             </div>
@@ -37,33 +36,18 @@ const RadioInput = (props) => {
                 id="no-option"
                 name="investment-response"
                 type="radio"
-                className="h-5 w-5 text-blue-600 border-gray-300 focus:ring-blue-500"
+                className="h-5 w-5 text-blue-600 border-white-300 focus:ring-blue-500"
                 value="no"
                 checked={response === 'no'}
                 onChange={() => handleChange('no')}
               />
-              <label htmlFor="no-option" className="ml-3 block text-gray-700">
+              <label htmlFor="no-option" className="ml-3 block text-white-700">
                 No
               </label>
             </div>
           </div>
-        </div>
         
-        {response && (
-          <div className="mt-2 p-3 bg-blue-50 rounded-md text-blue-800 text-sm">
-            You selected: <span className="font-medium">{response}</span>
-          </div>
-        )}
-        
-        <div className="flex justify-end">
-          <button
-            type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 shadow-md shadow-blue-300/50 transition-all"
-          >
-            Submit
-          </button>
         </div>
-      </form>
     </div>
   );
 };
