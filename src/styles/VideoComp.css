@@ -10,3 +10,12 @@
     flex: 1; /* Adjust based on your needs */
     margin: 5px; /* Optional: to add some space around each child */
   }
+  .total-vid-cont{
+  max-width: 800px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;  /* Stacks child divs vertically */
+  align-items: center;
+  /* border: 5px solid red; */
+  }
