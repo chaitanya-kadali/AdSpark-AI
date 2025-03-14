@@ -41,7 +41,7 @@ const styles = {
       maxWidth: '800px',
       height:'20%',
       // margin: '0 auto',
-      border:'5px solid white',
+      // border:'5px solid white',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',

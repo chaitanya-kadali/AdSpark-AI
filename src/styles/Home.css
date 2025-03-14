@@ -42,3 +42,19 @@ html, body {
   linear-gradient: (90deg, white, #ec4899, #34ff22) */
 
 }
+
+
+
+.half-circle{
+  width:100vw;
+  height: 30vh;
+  border:2px soild white;
+  background-image:url('https://assets.cdn.filesafe.space/lybiNCR6GLnVXj82WBkv/media/9eb0758e-c38c-4a42-9b85-793ee4945cb8.svg+xml');
+  background-size:cover; 
+  background-position:center;
+  background-repeat:no-repeat;
+  position: absolute; 
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%);
+}

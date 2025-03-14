@@ -13,6 +13,8 @@ function Home()
     
 return(
     <>
+    
+    <div className='half-circle'></div>
  <div className="background-container">
       
  <BackgroundGrid />
