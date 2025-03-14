@@ -56,10 +56,12 @@ const handleSubmit = async (e) => {
         console.log(form);
         
       } else {
+        setFormData({ name: "", number: "", business_name: ""});
         alert("Something went wrong. Please try again.");
         setFormData({ name: "", number: "", business_name: ""});
       }
     } catch (error) {
+      setFormData({ name: "", number: "", business_name: ""});
       console.error("Error!", error.message);
       setFormData({ name: "", number: "", business_name: ""});
     } finally {
