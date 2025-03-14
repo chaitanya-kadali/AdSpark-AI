@@ -19,7 +19,7 @@ const Typography = () => {
   >
  AI-Powered Mini Videos
   </span>
-  <span className="text-white">  for Your Brand </span>
+  <span className="text-white">  for <br></br>Your Brand </span>
       
        </h1>
     

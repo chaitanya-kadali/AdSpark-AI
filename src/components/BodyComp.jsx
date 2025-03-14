@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import '../styles/VideoComp.css'
+import WistiaVideo from './video/WistiaVideo';
+import { video } from 'framer-motion/client';
 
 // Common Styles
 const styles = {
@@ -12,9 +15,9 @@ const styles = {
       maxWidth: '400px', // Keep it compact
     },
     heading: {
-      fontSize: '1.5rem', // Smaller heading for better balance
+      fontSize: '2.2rem', // Smaller heading for better balance
       fontWeight: 'bold',
-      marginBottom: '5px',
+      marginBottom: '15px',
     },
     text: {
       fontSize: '1rem',
@@ -36,9 +39,7 @@ const styles = {
 
 const MagicIntro = () => (
   <motion.div style={styles.container} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-    {/* <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }} className="text-violet-300" >
-      ✨ Experience the Magic in Motion ✨
-    </motion.h1> */}
+    
     <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}  className="text-white">
         
       <p className="text-white !text-white">
@@ -52,10 +53,30 @@ const MagicIntro = () => (
       
     </p>
     </motion.p>
+
+    <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }} className="text-white bold" >
+    🎥 Our Work – See AI Magic in Action
+    </motion.h1>
+
+    <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}  className="text-white">
+        
+      <p className="text-white !text-white">
+        <span >  We craft 
+        <span className="ml-1"></span>
+        <span className="font-bold">high-impact videos 
+          <span className="ml-1"></span> </span> 
+
+         tailored for your niche.<span className="ml-1"></span></span>
+      <span className="italic font-semibold">  Check out some of our recent projects: 
+      </span>
+      
+    </p>
+    </motion.p>
+
   </motion.div>
 );
 
-const IndustryShowcase = ({ title, description, emoji }) => (
+const IndustryShowcase = ({ title, description,video_id }) => (
   <motion.div
     style={styles.container}
     initial={{ opacity: 0, x: -30 }}
@@ -68,7 +89,7 @@ const IndustryShowcase = ({ title, description, emoji }) => (
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      {emoji} {title}
+       {title}
     </motion.h2>
     <motion.p
       style={styles.text}
@@ -78,6 +99,13 @@ const IndustryShowcase = ({ title, description, emoji }) => (
     >
       {description}
     </motion.p>
+
+    <motion.div >
+    <div className="video-child">
+       <WistiaVideo mediaId={video_id}/>
+        </div> 
+    </motion.div>
+  
   </motion.div>
 );
 
@@ -106,21 +134,39 @@ const CallToAction = () => (
     <motion.p style={styles.text}>
       Don't let your brand fade into the background—make it <strong>unforgettable</strong>.
     </motion.p>
-    
   </motion.div>
 );
 
 const BodyComp = () => (
-  <div>
+  <>
     <MagicIntro />
-    <IndustryShowcase title="Fashion" description="Where style s technology—your latest trends, brought to life." emoji="👗" />
-    <IndustryShowcase title="Pickles" description="Every crunch, every flavor—captured in mouthwatering motion." emoji="🥒" />
-    <IndustryShowcase title="Restaurants" description="From sizzle to serve—irresistible dishes, now irresistible videos." emoji="🍽" />
-    <IndustryShowcase title="Farms" description="The heart of the earth—freshness and authenticity, visualized." emoji="🚜" />
-    <IndustryShowcase title="Cafes" description="Sip, savor, and share—warmth and aroma in every frame." emoji="☕" />
+    <div className='total-vid-cont'>
+
+        <div className="video-cont"> 
+          {/* have to change this by having all four childs together and main cont to be automatically changed based on screen size */}
+              <IndustryShowcase title="Fashion" 
+              description="Elevate your style with AI-generated cinematic flair" 
+              video_id="8g09s4cnzd" />
+
+            <IndustryShowcase title="Pickles" 
+              description="Make every jar pop with mouth-watering, scroll-stopping visuals." 
+              video_id="dccx8sinnc" />
+
+        </div>
+        <div className="video-cont"> 
+            <IndustryShowcase title="Restaurants" 
+                  description="Showcase your signature dishes with irresistible video content." 
+                  video_id="1p8stfjfcj" />
+              <IndustryShowcase title="Organic Farms" 
+                  description="Bring your farm’s fresh, natural story to life with vibrant visuals." 
+                  video_id="qo9xqql7e1" />
+
+
+        </div>
+  </div>
     <WhyAdSpark />
     <CallToAction />
-  </div>
+  </>
 );
 
 export default BodyComp;
