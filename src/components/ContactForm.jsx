@@ -57,9 +57,11 @@ const handleSubmit = async (e) => {
         
       } else {
         alert("Something went wrong. Please try again.");
+        setFormData({ name: "", number: "", business_name: ""});
       }
     } catch (error) {
       console.error("Error!", error.message);
+      setFormData({ name: "", number: "", business_name: ""});
     } finally {
       setIsSubmitting(false);
     }
