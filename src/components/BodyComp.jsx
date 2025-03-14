@@ -2,23 +2,26 @@ import { motion } from 'framer-motion';
 
 // Common Styles
 const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    padding: '20px',
-  },
-  heading: {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    marginBottom: '10px',
-  },
-  text: {
-    fontSize: '1.2rem',
-    maxWidth: '70%',
-    marginBottom: '20px',
-  },
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      textAlign: 'center',
+      padding: '10px',
+      width: '100%',
+      maxWidth: '400px', // Keep it compact
+    },
+    heading: {
+      fontSize: '1.5rem', // Smaller heading for better balance
+      fontWeight: 'bold',
+      marginBottom: '5px',
+    },
+    text: {
+      fontSize: '1rem',
+      maxWidth: '90%',
+      marginBottom: '10px',
+      lineHeight: '1.4', // Better text spacing
+    },
   button: {
     padding: '10px 20px',
     fontSize: '1rem',
@@ -53,11 +56,26 @@ const MagicIntro = () => (
 );
 
 const IndustryShowcase = ({ title, description, emoji }) => (
-  <motion.div style={styles.container} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-    <motion.h2 style={styles.heading} animate={{ x: [-20, 0] }} transition={{ duration: 0.5 }}>
+  <motion.div
+    style={styles.container}
+    initial={{ opacity: 0, x: -30 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    <motion.h2
+      style={styles.heading}
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       {emoji} {title}
     </motion.h2>
-    <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}>
+    <motion.p
+      style={styles.text}
+      initial={{ opacity: 0, x: -15 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       {description}
     </motion.p>
   </motion.div>
@@ -95,7 +113,7 @@ const CallToAction = () => (
 const BodyComp = () => (
   <div>
     <MagicIntro />
-    <IndustryShowcase title="Fashion" description="Where style meets technology—your latest trends, brought to life." emoji="👗" />
+    <IndustryShowcase title="Fashion" description="Where style s technology—your latest trends, brought to life." emoji="👗" />
     <IndustryShowcase title="Pickles" description="Every crunch, every flavor—captured in mouthwatering motion." emoji="🥒" />
     <IndustryShowcase title="Restaurants" description="From sizzle to serve—irresistible dishes, now irresistible videos." emoji="🍽" />
     <IndustryShowcase title="Farms" description="The heart of the earth—freshness and authenticity, visualized." emoji="🚜" />

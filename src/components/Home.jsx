@@ -4,7 +4,7 @@ import VideoManager from './video/VideoManager';
 import BackgroundGrid from './BackGround';
 import ContactForm from './ContactForm';
 import BodyComp from './BodyComp';
-import HeadingLogo from './HeadingLogo';
+import HeadingLogo from './TopArea/HeadingLogo';
 import Typography from './Typography';
 
 function Home()
@@ -20,11 +20,11 @@ return(
 
       {/* Content */}
       <div className="content">
-        <div>
+        
             <HeadingLogo/>
             <Typography />
             
-        </div>
+        
          <div> <BodyComp/> </div>
               <VideoManager />
         <div style={{width:"100%",paddingLeft:'2%'}}> 
