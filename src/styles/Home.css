@@ -38,5 +38,7 @@ html, body {
   min-height: 100vh;
   background: #000000; /* Fixes white area */
   overflow-x: hidden;
-  linear-gradient: (90deg, white, #ec4899, #f59e0b)
+  /* linear-gradient: (90deg, white, #ec4899, #f59e0b);
+  linear-gradient: (90deg, white, #ec4899, #34ff22) */
+
 }

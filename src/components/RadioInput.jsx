@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const RadioInput = (props) => {
-    const [response, setResponse] = useState('');
   const handleChange = (value) => {
-    setResponse(value);
-    console.log("User response:", value);
+    props.setRadio(value);
+    console.log("User radio:", value);
   };
 
   return (
@@ -23,7 +22,7 @@ const RadioInput = (props) => {
                 type="radio"
                 className="h-5 w-5 text-blue-600 border-white-300 focus:ring-blue-500"
                 value="yes"
-                checked={response === 'yes'}
+                checked={props.radio === 'yes'}
                 onChange={() => handleChange('yes')}
               />
               <label htmlFor="yes-option" className="ml-3 block text-white-700">
@@ -38,7 +37,7 @@ const RadioInput = (props) => {
                 type="radio"
                 className="h-5 w-5 text-blue-600 border-white-300 focus:ring-blue-500"
                 value="no"
-                checked={response === 'no'}
+                checked={props.radio === 'no'}
                 onChange={() => handleChange('no')}
               />
               <label htmlFor="no-option" className="ml-3 block text-white-700">

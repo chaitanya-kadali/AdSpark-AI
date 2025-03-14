@@ -3,15 +3,14 @@ import RadioInput from "./RadioInput";
 import '../styles/ContactForm.css'
 
 const ContactForm = () => {
-  const scriptURL = "https://script.google.com/macros/s/AKfycbxvTfViKLyRQRcJoh3sdvJB9srk_rGImsDomUo1wJe1MVbQsqVbcvXv08mDVKX1mcFexw/exec"; 
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzk7ugk0VKBuGIPgKFmjeuZuGXnK0Y-ia7b0QOz2YRzmhKUm7VBytpllW5_Ai8XWU0/exec"; 
 
   
   // State for form fields
   const [formData, setFormData] = useState({
     name: "",
     number: "",
-    email: "",
-    message: "",
+    business_name: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,17 +29,17 @@ const ContactForm = () => {
 
     try {
       const form = new FormData();
-      form.append("your-name", formData.name);
-      form.append("your-number", formData.number);
-      form.append("your-email", formData.email);
-      form.append("message", formData.message);
+      form.append("Name", formData.name);
+      form.append("Contact-Number", String(formData.number));
+      form.append("Business-Name", formData.business_name);
+      form.append("invest", radio);
 
       const response = await fetch(scriptURL, { method: "POST", body: form });
 
       if (response.ok) {
         alert("Thank you! Your form has been submitted.");
-        setFormData({ name: "", number: "", email: "", message: "" });
-        console.log(formData);
+        setFormData({ name: "", number: "", business_name: ""});
+        console.log(form);
         
       } else {
         alert("Something went wrong. Please try again.");
@@ -72,19 +71,36 @@ const ContactForm = () => {
 
                 <label className="log-labl">Enter the Contact Number:</label>
 
-                <input type="text" name="number" placeholder="Number" value={formData.number}
-                onChange={handleChange} required className="log-inp" /><br />
+                <input type="number" name="number" 
+                    style={{
+                      appearance: "textfield",
+                      WebkitAppearance: "none",
+                      MozAppearance: "textfield",
+                      fontSize: "16px",
 
-                 <label className="log-labl">Enter Company Name:</label>
+                      width: "100%",
+                      padding: "12px",
+                      margin: "10px 0",
+                      border: "1px solid #444",
+                      borderRadius: "10px",
+                      background: "#222",
+                      color: "white",
+                      outline: "none",
+                      transition: "0.3s",
+                    }}
+                 placeholder="Ph. Number" value={formData.number}
+                onChange={handleChange} required  /><br />
+
+                 <label className="log-labl">Enter Business Name:</label>
 
                 <input className="log-inp"  type="text"
-                name="email" placeholder="Email"value={formData.email}
+                name="business_name" placeholder="Business Name"value={formData.business_name}
                 onChange={handleChange} required /><br />
-                
+
               <label className="log-labl"> Are you ready to invest ₹5000 in AI-powered videos?
                  <span className="text-blue-500 ml-1">*</span> </label> 
 
-                <RadioInput />
+                <RadioInput  radio={radio} setRadio={setRadio} />
                 
                     <button className="log-btn" type="submit" id="submit" disabled={isSubmitting}>
                       {isSubmitting ? "Submitting..." : "Submit"}
@@ -104,9 +120,9 @@ export default ContactForm;
 
 /* Steps to Create the Google Apps Script Web App URL
 
-      1. Open Google Sheets and create a new sheet.
+      1. Open Google Sheets and create a new sheet.  --D
 
-      2. Rename the sheet to "Sheet1" (or update `sheetName` in the script) and name the column names you have like (your-name,your-number,your-email,message).
+      2. Rename the sheet to "Sheet1" (or update `sheetName` in the script) and name the column names you have like (your-name,your-number,your-business_name,invest).
 
       3. Open Extensions → Apps Script in the menu.
 
