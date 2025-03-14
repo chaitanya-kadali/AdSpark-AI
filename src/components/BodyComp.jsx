@@ -21,7 +21,7 @@ const styles = {
     marginBottom: '15px',
   },
   text: {
-    fontSize: '0.8rem',
+    fontSize: '1rem',
     maxWidth: '90%',
     marginBottom: '10px',
     lineHeight: '1.4', // Better text spacing
