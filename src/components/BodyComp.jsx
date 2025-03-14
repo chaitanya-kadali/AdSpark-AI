@@ -61,7 +61,7 @@ const MagicIntro = () => (
     <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}  className="text-white">
         
     
-        <span >  We craft 
+        <span > 💫 We craft 
         <span className="ml-1"></span>
         <span className="font-bold">high-impact videos 
           <span className="ml-1"></span> </span> 

@@ -5,7 +5,7 @@ const Typography = () => {
     <div className="max-w-4xl mx-auto text-center">
     {/* Main headline with gradient */}
     <h1 className="font-bold leading-tight" style={{ fontSize: "1.5rem" }}>
-      <span className="text-red-500 mr-3">🚀</span>
+      <span className="text-red-500">🚀</span>
       <span 
         style={{
           fontWeight:'bold',

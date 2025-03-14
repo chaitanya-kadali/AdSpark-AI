@@ -97,23 +97,23 @@ function VideoManager() {
   const showcases = [
     {
       title: "🍔 Restaurants",
-      description: "Showcase your signature dishes with irresistible video content.",
+      description: "🌟 Showcase your signature dishes with irresistible video content.",
       video_id: "1p8stfjfcj"
     },
     {
       title: "🌶️ Pickles",
-      description: "Make every jar pop with mouth-watering, scroll-stopping visuals.",
+      description: "🌟 Make every jar pop with mouth-watering, scroll-stopping visuals.",
       video_id: "dccx8sinnc"
     },
       
     {
       title: "🍯 Organic Farms",
-      description: "Bring your farm's fresh, natural story to life with vibrant visuals.",
+      description: "🌟 Bring your farm's fresh, natural story to life with vibrant visuals.",
       video_id: "qo9xqql7e1"
     },
     {
       title: "👗 Fashion",  
-      description: "Elevate your style with AI-generated cinematic flair",
+      description: "🌟 Elevate your style with AI-generated cinematic flair",
       video_id: "8g09s4cnzd"
     },
   ];
