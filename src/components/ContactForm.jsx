@@ -1,10 +1,105 @@
 import React, { useState } from "react";
+import RadioInput from "./RadioInput";
 import '../styles/ContactForm.css'
 
 const ContactForm = () => {
   const scriptURL = "https://script.google.com/macros/s/AKfycbxvTfViKLyRQRcJoh3sdvJB9srk_rGImsDomUo1wJe1MVbQsqVbcvXv08mDVKX1mcFexw/exec"; 
 
-  /* Steps to Create the Google Apps Script Web App URL
+  
+  // State for form fields
+  const [formData, setFormData] = useState({
+    name: "",
+    number: "",
+    email: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [radio, setRadio] = useState('not-selected');
+
+
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const form = new FormData();
+      form.append("your-name", formData.name);
+      form.append("your-number", formData.number);
+      form.append("your-email", formData.email);
+      form.append("message", formData.message);
+
+      const response = await fetch(scriptURL, { method: "POST", body: form });
+
+      if (response.ok) {
+        alert("Thank you! Your form has been submitted.");
+        setFormData({ name: "", number: "", email: "", message: "" });
+        console.log(formData);
+        
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error!", error.message);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="contf-container">
+      
+        <div className='form-body'>
+              
+            <form id='log-form' onSubmit={handleSubmit} name="contact-form">
+
+                <label className="log-l1">Submit Your Feedback</label>
+
+             
+
+                <label className="log-labl">Enter the Name:</label>
+
+                <input type="text" className="log-inp" 
+                name="name" placeholder="Name"  
+                value={formData.name} onChange={handleChange}
+                required/><br />
+
+                <label className="log-labl">Enter the Contact Number:</label>
+
+                <input type="text" name="number" placeholder="Number" value={formData.number}
+                onChange={handleChange} required className="log-inp" /><br />
+
+                 <label className="log-labl">Enter Company Name:</label>
+
+                <input className="log-inp"  type="text"
+                name="email" placeholder="Email"value={formData.email}
+                onChange={handleChange} required /><br />
+
+                <RadioInput />
+                
+                    <button className="log-btn" type="submit" id="submit" disabled={isSubmitting}>
+                      {isSubmitting ? "Submitting..." : "Submit"}
+                    </button>
+            </form>
+        </div>
+
+    </div>
+  );
+};
+
+export default ContactForm;
+
+
+
+
+
+/* Steps to Create the Google Apps Script Web App URL
 
       1. Open Google Sheets and create a new sheet.
 
@@ -76,91 +171,3 @@ const ContactForm = () => {
 
 
       */
-  // State for form fields
-  const [formData, setFormData] = useState({
-    name: "",
-    number: "",
-    email: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Handle input changes
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const form = new FormData();
-      form.append("your-name", formData.name);
-      form.append("your-number", formData.number);
-      form.append("your-email", formData.email);
-      form.append("message", formData.message);
-
-      const response = await fetch(scriptURL, { method: "POST", body: form });
-
-      if (response.ok) {
-        alert("Thank you! Your form has been submitted.");
-        setFormData({ name: "", number: "", email: "", message: "" });
-        console.log(formData);
-        
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error!", error.message);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  return (
-    <div className="contf-container">
-      
-        <div className='form-body'>
-              
-            <form id='log-form' onSubmit={handleSubmit} name="contact-form">
-
-                <label className="log-l1">Submit Your Feedback</label>
-
-              <label className="log-labl">Enter the Email ID:</label>
-
-                <input className="log-inp"  type="email"
-                name="email" placeholder="Email"value={formData.email}
-                onChange={handleChange} required /><br />
-
-                <label className="log-labl">Enter the Name:</label>
-
-                <input type="text" className="log-inp" 
-                name="name" placeholder="Name"  
-                value={formData.name} onChange={handleChange}
-                required/><br />
-
-                <label className="log-labl">Enter the Phone number:</label>
-
-                <input type="text" name="number" placeholder="Number" value={formData.number}
-                onChange={handleChange} required className="log-inp" /><br />
-
-                <textarea className="log-inp" name="message" rows="7" placeholder="Your Message"
-                      value={formData.message} onChange={handleChange}
-                    required ></textarea>
-                
-                    <button className="log-btn" type="submit" id="submit" disabled={isSubmitting}>
-                      {isSubmitting ? "Submitting..." : "Submit"}
-                    </button>
-            </form>
-        </div>
-
-    </div>
-  );
-};
-
-export default ContactForm;
-
-

@@ -12,7 +12,7 @@ const styles = {
       textAlign: 'center',
       padding: '10px',
       width: '100%',
-      maxWidth: '400px', // Keep it compact
+      maxWidth: '600px', // Keep it compact
     },
     heading: {
       fontSize: '2.2rem', // Smaller heading for better balance
@@ -112,17 +112,36 @@ const IndustryShowcase = ({ title, description,video_id }) => (
 const WhyAdSpark = () => (
   <motion.div style={styles.container} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
     <motion.h2 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }}>
-      🔥 Why Settle for Ordinary? Go Beyond with AdSpark AI.
+    📊 Your Brand Could Be Next – Let's Make It Happen
     </motion.h2>
+
+    ✨ What’s Included – Our Add-Ons
+
     <motion.p style={styles.text}>
-      🎨 <strong>Custom-Crafted Perfection:</strong> Each video mirrors your industry’s unique vibe—no cookie-cutter templates here.
+    ✅ <span className="font-bold text-white">Custom Branding - </span> 
+     We integrate your logo, colors, and unique style seamlessly.
     </motion.p>
+    
     <motion.p style={styles.text}>
-      ⚡ <strong>Lightning-Fast Delivery:</strong> Our AI works faster than imagination—your vision, realized in no time.
+    ✅ <span className="font-bold text-white">Script Assistance - </span> 
+    Need help with messaging? We’ll craft compelling copy that sells.
     </motion.p>
+
     <motion.p style={styles.text}>
-      📊 <strong>Unstoppable Engagement:</strong> Hook your audience, hold their gaze, and keep them coming back for more.
+    ✅ <span className="font-bold text-white">Multiple Aspect Ratios - </span> 
+    Perfectly optimized for Instagram, Facebook, and more.
     </motion.p>
+    
+    <motion.p style={styles.text}>
+    ✅ <span className="font-bold text-white">Fast Delivery- </span> 
+    Get your AI-powered mini videos delivered quickly without compromise.
+    </motion.p>
+
+    <motion.p style={styles.text}>
+    ✅ <span className="font-bold text-white">Revisions Included - </span> 
+    We work with you to ensure the final product exceeds expectations.
+    </motion.p>
+
   </motion.div>
 );
 
