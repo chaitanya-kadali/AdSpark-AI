@@ -33,16 +33,19 @@ const styles = {
 
 const MagicIntro = () => (
   <motion.div style={styles.container} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-    <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }} className="text-violet-300" >
+    {/* <motion.h1 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }} className="text-violet-300" >
       ✨ Experience the Magic in Motion ✨
-    </motion.h1>
+    </motion.h1> */}
     <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}  className="text-white">
         
       <p className="text-white !text-white">
-      Why tell your brand’s story when you can &nbsp; <span className="font-bold">show it? </span> At &nbsp;
-      <span className="italic">AdSpark AI </span>
-      we transform ordinary moments into <span className="underline">extraordinary experiences</span> with AI-generated
-      <span className="italic font-semibold"> mini videos—tailored perfectly </span> for your industry.
+      <span className="text-red-500 mr-3">🔥</span>
+      <span className="italic">  Get Ready-To-Launch  <span className="ml-1"></span></span>
+      <span className="font-bold">AI-Powered  <span className="ml-1"></span> </span> 
+      <span className="italic">Mini Videos <span className="ml-1"></span></span>
+
+      <span className="italic font-semibold"> 
+      for Your Brand </span>
       
     </p>
     </motion.p>

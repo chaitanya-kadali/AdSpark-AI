@@ -27,15 +27,13 @@ const Typography = () => {
     {/* Subheading with rocket icon */}
     <div className="flex flex-wrap justify-center items-center text-3xl mt-6 mb-8 text-center">
         <span className="text-red-500 mr-3">🚀</span>
-        <span className="text-violet-400">Step &nbsp; </span>
-        <span className="italic text-violet-400">Into the future  with AdSpark AI—Your Brand,  &nbsp; </span>
-        <span className="text-white">Reimagined with &nbsp; </span>
-        <span className="underline text-white">AI </span>
-        <span className="text-white">&nbsp; Mini Videos </span>
-      </div>
+        <span className="text-violet-400">AI-Powered   &nbsp; </span>
+        <span className="italic text-violet-400">Mini Videos &nbsp;   </span>
+        <span className="text-violet-400"> for    &nbsp;  </span>
+      <span className="text-white"> Your Brand </span>
+    </div>
     
     {/* Descriptive text */}
-    
   </div>
   );
 };
