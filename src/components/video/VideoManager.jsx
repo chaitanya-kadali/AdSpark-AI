@@ -44,9 +44,8 @@ const styles = {
       // border:'5px solid white',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
-      marginBottom:"-25%"
-    },
+      alignItems: 'center'
+   },
     arrow: {
       position: 'absolute',
       top: '50%',
@@ -97,25 +96,26 @@ function VideoManager() {
   // Create an array of all the video showcases
   const showcases = [
     {
-      title: "Fashion",
-      description: "Elevate your style with AI-generated cinematic flair",
-      video_id: "8g09s4cnzd"
-    },
-    {
-      title: "Pickles",
-      description: "Make every jar pop with mouth-watering, scroll-stopping visuals.",
-      video_id: "dccx8sinnc"
-    },
-    {
-      title: "Restaurants",
+      title: "🍔 Restaurants",
       description: "Showcase your signature dishes with irresistible video content.",
       video_id: "1p8stfjfcj"
     },
     {
-      title: "Organic Farms",
+      title: "🌶️ Pickles",
+      description: "Make every jar pop with mouth-watering, scroll-stopping visuals.",
+      video_id: "dccx8sinnc"
+    },
+      
+    {
+      title: "🍯 Organic Farms",
       description: "Bring your farm's fresh, natural story to life with vibrant visuals.",
       video_id: "qo9xqql7e1"
-    }
+    },
+    {
+      title: "👗 Fashion",  
+      description: "Elevate your style with AI-generated cinematic flair",
+      video_id: "8g09s4cnzd"
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -136,7 +136,7 @@ function VideoManager() {
   };
 
   return (
-    <div style={styles.navigationContainer}>
+    <div style={styles.navigationContainer} className='navigator'>
       {/* Left Arrow */}
       <div 
         style={{...styles.arrow, ...styles.leftArrow}} 

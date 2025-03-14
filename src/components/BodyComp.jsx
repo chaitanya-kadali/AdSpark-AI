@@ -44,8 +44,7 @@ const MagicIntro = () => (
     <motion.p style={styles.text} animate={{ y: [-10, 0] }} transition={{ duration: 0.5 }}  className="text-white">
         
       
-      <span className="text-red-500 mr-3">🔥</span>
-      <span className="italic">  Get Ready-To-Launch  <span className="ml-1"></span></span>
+      <span className="italic">  🔥 Get Ready-To-Launch  <span className="ml-1"></span></span>
       <span className="font-bold">AI-Powered  <span className="ml-1"></span> </span> 
       <span className="italic">Mini Videos <span className="ml-1"></span></span>
 
