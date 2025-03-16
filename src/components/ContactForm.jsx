@@ -76,18 +76,18 @@ const handleSubmit = async (e) => {
               
             <form id='log-form' onSubmit={handleSubmit} name="contact-form">
 
-                <label className="log-l1">Fill in the details below and let’s get started:</label>
+                <label className="log-l1"><span className="text-red-500">🚀</span> To Book a Call :</label>
 
              
 
-                <label className="log-labl">Enter the Name:</label>
+                <label className="log-labl">Name:</label>
 
                 <input type="text" className="log-inp" 
                 name="name" placeholder="Name"  
                 value={formData.name} onChange={handleChange}
                 required/><br />
 
-                <label className="log-labl">Enter the Contact Number:</label>
+                <label className="log-labl">Contact Number:</label>
 
                 <input type="number" name="number" 
                     style={{
@@ -106,10 +106,10 @@ const handleSubmit = async (e) => {
                       outline: "none",
                       transition: "0.3s",
                     }}
-                 placeholder="Ph. Number" value={formData.number}
+                 placeholder="+91" value={formData.number}
                 onChange={handleChange} required  /><br />
 
-                 <label className="log-labl">Enter Business Name:</label>
+                 <label className="log-labl">Business Name:</label>
 
                 <input className="log-inp"  type="text"
                 name="business_name" placeholder="Business Name"value={formData.business_name}
