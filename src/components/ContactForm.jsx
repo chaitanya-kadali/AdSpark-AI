@@ -35,6 +35,9 @@ const ContactForm = () => {
     })
 }
 
+const handleThankYou= () => {
+  window.location.href='/thankyou';
+}
 
 const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,6 +69,7 @@ const handleSubmit = async (e) => {
       setFormData({ name: "", number: "", business_name: ""});
     } finally {
       setIsSubmitting(false);
+      handleThankYou();
     }
   };
 
