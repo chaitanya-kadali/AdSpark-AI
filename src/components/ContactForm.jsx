@@ -119,7 +119,7 @@ const handleSubmit = async (e) => {
                 name="business_name" placeholder="Business Name"value={formData.business_name}
                 onChange={handleChange} required /><br />
 
-              <label className="log-labl"> Are you ready to invest ₹3000 in AI-powered videos?
+              <label className="log-labl"> Are you ready to invest ₹1500 in AI-powered videos?
                  <span className="text-blue-500 ml-1">*</span> </label> 
 
                 <RadioInput  radio={radio} setRadio={setRadio} />
