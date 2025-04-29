@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 // Sample video data
 const videos = [
+  {url:"https://res.cloudinary.com/dijzxhznv/video/upload/v1745930332/IMG_1098_ntgwve.mov" },
   {url:"https://res.cloudinary.com/dijzxhznv/video/upload/v1745930332/IMG_1098_ntgwve.mov" }
   
 ];
