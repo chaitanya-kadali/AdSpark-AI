@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 // import WistiaVideo from './WistiaVideo';
 import '../../styles/VideoComp.css';
+import PlainVideos from './plainvideoscomp';
 
 // Common Styles
 const styles = {
@@ -73,6 +74,7 @@ function VideoManager() {
             transition={{ duration: 0.5 }}
           >
             <p>video chai player here brooooo</p>
+            <PlainVideos />
           </motion.div>
         </AnimatePresence>
       </div>
