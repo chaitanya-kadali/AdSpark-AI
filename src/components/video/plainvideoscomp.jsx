@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 
 // Sample video data
 const videos = [
-    { url: "/assets/IMG_1128.mp4" },
-  { url: "/assets/IMG_1098.MOV" },
-  
-  
+  {url:"https://res.cloudinary.com/dijzxhznv/video/upload/v1745930332/IMG_1098_ntgwve.mov" }
   
 ];
 
