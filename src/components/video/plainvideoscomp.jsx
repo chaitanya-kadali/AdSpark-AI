@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
+import WistiaVideo  from './WistiaVideo';
 
 // Sample video data
 const videos = [
-  {url:"https://res.cloudinary.com/dijzxhznv/video/upload/v1745930332/IMG_1098_ntgwve.mov" },
-  {url:"https://res.cloudinary.com/dijzxhznv/video/upload/v1745930332/IMG_1098_ntgwve.mov" }
+  {id:"1p8stfjfcj" },
+  {id:"dccx8sinnc" },
+  {id:"qo9xqql7e1" },
+  {id:"8g09s4cnzd" },
+  {id:"m5bib6bplu" },
+  {id:"gcmavdh4uo" },
+  {id:"yx3r3e6747" },
+  {id:"4ije2vccss" },
+  {id:"bybjjsqwil" },
+  {id:"bpxxool61u" }
   
 ];
 
 function PlainVideos() {
   const [activeVideo, setActiveVideo] = useState(null);
 
-  const handleVideoClick = (index) => {
-    setActiveVideo(activeVideo === index ? null : index);
-  };
+//   const handleVideoClick = (index) => {
+//     setActiveVideo(activeVideo === index ? null : index);
+//   };
 
   return (
     <div className="min-h-screen">
@@ -21,18 +30,10 @@ function PlainVideos() {
           {videos.map((video, index) => (
             <div 
               key={index} 
-              className="relative aspect-[9/16] bg-gray-900 cursor-pointer overflow-hidden mb-4"
-              onClick={() => handleVideoClick(index)}
+              className="w-75 relative aspect-[9/16]  cursor-pointer overflow-hidden mb-2"
             >
-              <video
-                src={video.url}
-                className="w-80 h-full object-cover transition-transform duration-300 hover:scale-105 "
-                autoPlay={activeVideo === index}
-                controls={activeVideo === index}
-                playsInline
-                
-                preload="metadata"
-              />
+                <WistiaVideo mediaId={video.id} />
+              
             </div>
           ))}
         </div>

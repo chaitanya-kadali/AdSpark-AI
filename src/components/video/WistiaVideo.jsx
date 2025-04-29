@@ -22,7 +22,7 @@ const WistiaVideo = ({ mediaId }) => {
 
   return (
     
-    <div style={{ height:"90%", maxWidth: "400px", flex: "1",margin:"10%"}}>
+    <div style={{ height:"90%", maxWidth: "400px", flex: "1",margin:"3%"}}>
       {/* Wistia Player Component */}
       <style>
         {`

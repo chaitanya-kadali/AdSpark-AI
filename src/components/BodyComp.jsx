@@ -79,6 +79,7 @@ const MagicIntro = () => (
 
 
 const WhyAdSpark = () => (
+  <div className="mt-11 " >
   <motion.div style={styles.container} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
     <motion.h2 style={styles.heading} animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }}>
     📊 Your Brand Could Be Next – Let's Make It Happen
@@ -124,6 +125,7 @@ const WhyAdSpark = () => (
     </motion.div>
 
   </motion.div>
+  </div>
 );
 
 const CallToAction = () => (
