@@ -73,7 +73,6 @@ function VideoManager() {
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
           >
-            {/* <p>video chai player here brooooo</p> */}
             <PlainVideos />
           </motion.div>
         </AnimatePresence>
