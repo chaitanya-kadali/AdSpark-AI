@@ -3,16 +3,16 @@ import WistiaVideo  from './WistiaVideo';
 
 // Sample video data
 const videos = [
-  {id:"1p8stfjfcj" },
-  {id:"dccx8sinnc" },
-  {id:"qo9xqql7e1" },
-  {id:"8g09s4cnzd" },
+  {id:"bybjjsqwil" },
   {id:"m5bib6bplu" },
+  {id: "bpxxool61u" },
   {id:"gcmavdh4uo" },
   {id:"yx3r3e6747" },
   {id:"4ije2vccss" },
-  {id:"bybjjsqwil" },
-  {id:"bpxxool61u" }
+  {id: "1p8stfjfcj" },
+  {id:"dccx8sinnc" },
+  {id:"qo9xqql7e1" },
+  {id:"8g09s4cnzd" }
   
 ];
 
